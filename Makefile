@@ -274,7 +274,7 @@ qemu: $(_QEMU_STATIC) $(_QEMU_STATIC)-orig
 
 $(_QEMU_STATIC):
 	mkdir -p $(_QEMU_COLLECTION)
-	gcc -static -DQEMU_ARCH=\"$(ARCH)\" -m32 qemu-wrapper.c -o $(_QEMU_STATIC)
+	gcc -static -DQEMU_ARCH=\"$(ARCH)\" qemu-wrapper.c -o $(_QEMU_STATIC)
 	$(call say,"QEMU wrapper is ready")
 
 
